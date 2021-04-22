@@ -118,7 +118,7 @@ t0 = time()
 MMD = np.zeros([num_epochs, ])
 
 # for epoch in range(num_epochs):
-for epoch in range(40):
+for epoch in range(50):
     # -- train epoch -- #
     D_loss_curr, G_loss_curr = model.train_epoch(epoch, samples, labels, sess, Z, X, D_loss, G_loss, D_solver, G_solver, **train_settings)
 

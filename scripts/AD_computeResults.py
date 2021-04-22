@@ -129,7 +129,7 @@ if __name__ == "__main__":
     print('Main Starting...')
     
     for epochGAN in [10]:
-        for epoch_autoencoder in range(15):
+        for epoch_autoencoder in range(50):
         # for epoch_autoencoder in range(0,35):
             # for epoch_autoencoder in [5]:
             path_AD_autoencoder_results = settings["path_AD_autoencoder_results"] + str(epochGAN) + "_epochAutoencoder" + str(epoch_autoencoder)

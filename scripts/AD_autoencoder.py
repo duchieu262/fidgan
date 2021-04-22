@@ -4,14 +4,15 @@ import model
 import json
 import numpy as np
 import pandas as pd
+import os
 import tensorflow as tf
 from time import time
 from mod_core_rnn_cell_impl import LSTMCell  # modified to allow initializing bias in lstm
 import autoencoderFunctions
 from sklearn import metrics
 import matplotlib.pyplot as plt
-import os
 
+os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 begin = time()
 tf.compat.v1.disable_eager_execution()
 tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
@@ -189,7 +190,7 @@ if __name__ == "__main__":
     #         ad.ADfunc()
 
     for epochGAN in [10]:
-        for epoch_autoencoder in range(300):
+        for epoch_autoencoder in range(50):
             path_autoencoder_training_parameters = settings["path_autoencoder_training_parameters"] + str(epoch_autoencoder) + '.npy'
             path_AD_autoencoder_results = settings["path_AD_autoencoder_results"] + str(epochGAN) + "_epochAutoencoder" + str(epoch_autoencoder)
             try:

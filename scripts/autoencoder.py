@@ -121,7 +121,7 @@ with tf.compat.v1.Session(config=tf.compat.v1.ConfigProto(gpu_options=gpu_option
     sess.run(init)
 
     # for epoch in range(training_epochs):
-    for epoch in range(20):
+    for epoch in range(50):
         loss_epoch = 0
         num_batches = int(samples.shape[0]/batch_size)
         for batch in range(num_batches):    # for batch in range(1):
